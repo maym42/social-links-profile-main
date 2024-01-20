@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+:root {
+  /*## Colors*/
+  /*### Primary*/
+  --Green: hsl(75, 94%, 57%);
+  /*### Neutral*/
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --Dark-Grey: hsl(0, 0%, 12%);
+  --Off-Black: hsl(0, 0%, 8%);
+}
+p,
+h1 {
+  margin: 0;
+}
+body {
+  background-color: var(--Off-Black);
+  /*flex*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*text*/
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  color: white;
+  /*size*/
+  height: 100vh;
+  /*space*/
+  margin: 0;
+}
+.card {
+  background-color: var(--Dark-Grey);
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  /*size*/
+  width: fit-content;
+  /*space*/
+  padding: 2em;
+  /*border*/
+  border-radius: 0.5em;
+}
+.person {
+  /*flex*/
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: rgb(51, 40, 22);*/
+  padding: 0 2em;
+  /*text*/
+  text-align: center;
+  /*size*/
+  width: fit-content;
+}
+.name {
+  font-weight: 600;
+  font-size: 1.75em;
+  margin: 0.5rem;
+}
+.location {
+  color: var(--Green);
+  font-weight: 600;
+}
+.avatar {
+  /*image*/
+  background-image: url("./assets/images/avatar-jessica.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*size*/
+  width: 6em;
+  height: 6em;
+  /*border*/
+  border-radius: 100%;
+  border: 0.25em solid var(--Grey);
+}
+.linksList {
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  /*size*/
+  width: 100%;
+}
+.btn {
+  background-color: var(--Grey);
+  /*text*/
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  /*space*/
+  padding: 1em 0;
+  /*border*/
+  border-radius: 0.5em;
+  /*transition*/
+  transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+}
+.btn:hover {
+  color: black;
+  background-color: var(--Green);
+}
+/*----------------*/
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  /*text-align: center;*/
+}
+
+.attribution a {
+  color: var(--Green);
+}
+/*----------------- Mobile -----------------*/
+@media screen and (max-width: 400px) {
+  body {
+    background-color: blue;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 300px) {
+  body {
+    font-size: 11px;
+  }
+  .card {
+    padding: 1em;
+  }
+}
+@media screen and (max-height: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-height: 540px) and (orientation: landscape) {
+  body {
+    /*background-color: pink;*/
+    font-size: 11px;
+  }
+  .card {
+    flex-direction: row;
+    padding: 1.5em;
+  }
+  .person {
+    gap: 1em;
+    padding: 0;
+  }
+}
